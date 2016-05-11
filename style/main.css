@@ -10,11 +10,6 @@ body::before {
   background-position: 30% 0%;
   background-image: url('../img/nude.png');
   background-size: cover;
-  -webkit-filter: blur(30px);
-  -moz-filter: blur(30px);
-  -o-filter: blur(30px);
-  -ms-filter: blur(30px);
-  filter: blur(30px);
 }
 
 div {
@@ -140,24 +135,15 @@ body[state="1to0"]::before {
 
 body[state="0to1"]::before,
 body[state="2to1"]::before {
-  -webkit-filter: blur(24px);
-  -moz-filter: blur(24px);
-  -o-filter: blur(24px);
-  -ms-filter: blur(24px);
-  filter: blur(24px);
+  -webkit-filter: blur(20px);
+  -moz-filter: blur(20px);
+  -o-filter: blur(20px);
+  -ms-filter: blur(20px);
+  filter: blur(20px);
 }
 
 body[state="1to2"]::before,
 body[state="3to2"]::before {
-  -webkit-filter: blur(18px);
-  -moz-filter: blur(18px);
-  -o-filter: blur(18px);
-  -ms-filter: blur(18px);
-  filter: blur(18px);
-}
-
-body[state="2to3"]::before,
-body[state="4to3"]::before {
   -webkit-filter: blur(12px);
   -moz-filter: blur(12px);
   -o-filter: blur(12px);
@@ -165,13 +151,22 @@ body[state="4to3"]::before {
   filter: blur(12px);
 }
 
-body[state="3to4"]::before,
-body[state="5to4"]::before {
+body[state="2to3"]::before,
+body[state="4to3"]::before {
   -webkit-filter: blur(6px);
   -moz-filter: blur(6px);
   -o-filter: blur(6px);
   -ms-filter: blur(6px);
   filter: blur(6px);
+}
+
+body[state="3to4"]::before,
+body[state="5to4"]::before {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 
 body[state="4to5"]::before {
@@ -231,72 +226,72 @@ body[state="5to4"]::before {
     filter: blur(30px);
   }
   100% {
-    -webkit-filter: blur(24px);
-    -moz-filter: blur(24px);
-    -o-filter: blur(24px);
-    -ms-filter: blur(24px);
-    filter: blur(24px);
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
   }
 }
 
 @keyframes state1to2 {
   0% {
-    -webkit-filter: blur(24px);
-    -moz-filter: blur(24px);
-    -o-filter: blur(24px);
-    -ms-filter: blur(24px);
-    filter: blur(24px);
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
   }
   100% {
-    -webkit-filter: blur(18px);
-    -moz-filter: blur(18px);
-    -o-filter: blur(18px);
-    -ms-filter: blur(18px);
-    filter: blur(18px);
+    -webkit-filter: blur(12px);
+    -moz-filter: blur(12px);
+    -o-filter: blur(12px);
+    -ms-filter: blur(12px);
+    filter: blur(12px);
   }
 }
 
 @keyframes state2to3 {
   0% {
-    -webkit-filter: blur(18px);
-    -moz-filter: blur(18px);
-    -o-filter: blur(18px);
-    -ms-filter: blur(18px);
-    filter: blur(18px);
-  }
-  100% {
     -webkit-filter: blur(12px);
     -moz-filter: blur(12px);
     -o-filter: blur(12px);
     -ms-filter: blur(12px);
     filter: blur(12px);
+  }
+  100% {
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
   }
 }
 
 @keyframes state3to4 {
   0% {
-    -webkit-filter: blur(12px);
-    -moz-filter: blur(12px);
-    -o-filter: blur(12px);
-    -ms-filter: blur(12px);
-    filter: blur(12px);
-  }
-  100% {
     -webkit-filter: blur(6px);
     -moz-filter: blur(6px);
     -o-filter: blur(6px);
     -ms-filter: blur(6px);
     filter: blur(6px);
+  }
+  100% {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
   }
 }
 
 @keyframes state4to5 {
   0% {
-    -webkit-filter: blur(6px);
-    -moz-filter: blur(6px);
-    -o-filter: blur(6px);
-    -ms-filter: blur(6px);
-    filter: blur(6px);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
   }
   100% {
     -webkit-filter: blur(0px);
@@ -316,16 +311,33 @@ body[state="5to4"]::before {
     filter: blur(0px);
   }
   100% {
-    -webkit-filter: blur(6px);
-    -moz-filter: blur(6px);
-    -o-filter: blur(6px);
-    -ms-filter: blur(6px);
-    filter: blur(6px);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
   }
 }
 
 @keyframes state4to3 {
   0% {
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
+  }
+  100% {
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+  }
+}
+
+@keyframes state3to2 {
+  0% {
     -webkit-filter: blur(6px);
     -moz-filter: blur(6px);
     -o-filter: blur(6px);
@@ -341,7 +353,7 @@ body[state="5to4"]::before {
   }
 }
 
-@keyframes state3to2 {
+@keyframes state2to1 {
   0% {
     -webkit-filter: blur(12px);
     -moz-filter: blur(12px);
@@ -350,38 +362,21 @@ body[state="5to4"]::before {
     filter: blur(12px);
   }
   100% {
-    -webkit-filter: blur(18px);
-    -moz-filter: blur(18px);
-    -o-filter: blur(18px);
-    -ms-filter: blur(18px);
-    filter: blur(18px);
-  }
-}
-
-@keyframes state2to1 {
-  0% {
-    -webkit-filter: blur(18px);
-    -moz-filter: blur(18px);
-    -o-filter: blur(18px);
-    -ms-filter: blur(18px);
-    filter: blur(18px);
-  }
-  100% {
-    -webkit-filter: blur(24px);
-    -moz-filter: blur(24px);
-    -o-filter: blur(24px);
-    -ms-filter: blur(24px);
-    filter: blur(24px);
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
   }
 }
 
 @keyframes state1to0 {
   0% {
-    -webkit-filter: blur(24px);
-    -moz-filter: blur(24px);
-    -o-filter: blur(24px);
-    -ms-filter: blur(24px);
-    filter: blur(24px);
+    -webkit-filter: blur(20px);
+    -moz-filter: blur(20px);
+    -o-filter: blur(20px);
+    -ms-filter: blur(20px);
+    filter: blur(20px);
   }
   100% {
     -webkit-filter: blur(30px);
