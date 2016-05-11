@@ -1,26 +1,39 @@
 'use strict';
 window.onload = function() {
-  var state = [0, 0, 0, 0, 0];
-  var current = 0;
-
-  var q0 = document.getElementById('q0');
-  var q1 = document.getElementById('q1');
-  var q2 = document.getElementById('q2');
-  var q3 = document.getElementById('q3');
-  var q4 = document.getElementById('q4');
-  var q5 = document.getElementById('q5');
-  var e0 = document.getElementById('e0');
-  var e1 = document.getElementById('e1');
-  var e2 = document.getElementById('e2');
+  var q = [{
+    target: document.getElementById('q0'),
+    error: document.getElementById('e0'),
+    state: 0,
+  }, {
+    target: document.getElementById('q1'),
+    error: document.getElementById('e1'),
+    state: 0,
+  }, {
+    target: document.getElementById('q2'),
+    error: document.getElementById('e2'),
+    state: 0,
+  }, {
+    target: document.getElementById('q3'),
+    state: 0,
+  }, {
+    target: document.getElementById('q4'),
+    state: 0,
+  }, {
+    target: document.getElementById('q5'),
+    error: document.getElementById('e1'),
+    state: 0,
+  }];
   var s = document.getElementById('submit');
+
+  var current = 0;
 
   var validateEmail = function(email) {
     return !!email.match(/.+@.+\..+/);
   };
   var updateState = function() {
     var n = 0;
-    state.forEach(function(v) {
-      n = n + v;
+    q.forEach(function(v) {
+      n = n + v.state;
     });
     var str = '' + current + 'to' + n;
     if (current !== n) {
@@ -37,45 +50,37 @@ window.onload = function() {
   };
   var changeState = function(n, bool) {
     if (bool) {
-      state[n] = 1;
-      if (n === 0) {
-        e0.classList.remove('on');
-      } else if (n === 1) {
-        e1.classList.remove('on');
-      } else if (n === 2) {
-        e2.classList.remove('on');
+      q[n].state = 1;
+      if (q[n].error) {
+        q[n].error.classList.remove('on');
       }
     } else {
-      state[n] = 0;
-      if (n === 0) {
-        e0.classList.add('on');
-      } else if (n === 1) {
-        e1.classList.add('on');
-      } else if (n === 2) {
-        e2.classList.add('on');
+      q[n].state = 0;
+      if (q[n].error) {
+        q[n].error.classList.add('on');
       }
     }
     updateState();
   };
 
-  q0.addEventListener('change', function() {
+  q[0].target.addEventListener('change', function() {
     changeState(0, validateEmail(this.value));
   });
-  q1.addEventListener('change', function() {
+  q[1].target.addEventListener('change', function() {
     changeState(1, this.value.length >= 8);
-    changeState(2, q1.value === q2.value);
+    changeState(2, q[1].target.value === q[2].target.value);
   });
-  q2.addEventListener('change', function() {
-    changeState(2, q1.value === q2.value);
+  q[2].target.addEventListener('change', function() {
+    changeState(2, q[1].target.value === q[2].target.value);
   });
-  q3.addEventListener('change', function() {
+  q[3].target.addEventListener('change', function() {
     changeState(3, !!this.value);
   });
-  q4.addEventListener('change', function() {
-    changeState(4, q4.value || q5.value);
+  q[4].target.addEventListener('change', function() {
+    changeState(4, q[4].target.value || q[5].target.value);
   });
-  q5.addEventListener('change', function() {
-    changeState(4, q4.value || q5.value);
+  q[5].target.addEventListener('change', function() {
+    changeState(4, q[4].target.value || q[5].target.value);
   });
 
 };
