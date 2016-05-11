@@ -78,9 +78,4 @@ window.onload = function() {
     changeState(4, q4.value || q5.value);
   });
 
-  // setTimeout(function() {
-  //   s.classList.add('on');
-  //   s.removeAttribute('disabled');
-  // }, 1000);
-
 };
