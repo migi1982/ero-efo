@@ -1,0 +1,392 @@
+body::before {
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  display: block;
+  background-position: 30% 0%;
+  background-image: url('/img/nude.png');
+  background-size: cover;
+  -webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  filter: blur(30px);
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.main {
+  padding: 16px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+}
+
+.main h1 {
+  margin-bottom: 16px;
+  font-size: 1.2em;
+}
+
+.form {}
+
+.form .wrap {
+  margin-bottom: 16px;
+}
+
+.form .wrap h2 {
+  margin-bottom: 8px;
+}
+
+.form .wrap .error {
+  margin-bottom: 8px;
+  color: #D67087;
+  font-size: .8em;
+  opacity: 0;
+  display: none;
+}
+
+.form .wrap .error.on {
+  display: block;
+  opacity: 1;
+}
+
+.form .wrap .error::before {
+  content: '* ';
+}
+
+.form .submit {
+  margin-top: 24px;
+}
+
+.form .submit input[disabled] {
+  opacity: .2;
+}
+
+.form .submit input.on {
+  opacity: 1;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-name: submit;
+  -webkit-animation-duration: .5s;
+}
+
+@keyframes submit {
+  0% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.input[type="text"],
+.input[type="number"],
+.input[type="password"] {
+  -webkit-appearance: none;
+  border: none;
+  box-shadow: none;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  background-color: rgba(255, 255, 255, .5);
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+input[type="submit"] {
+  -webkit-appearance: none;
+  width: 100%;
+  background-color: #be4963;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  padding: 8px;
+  border-radius: 2px;
+}
+
+body[state="0to1"]::before,
+body[state="1to2"]::before,
+body[state="2to3"]::before,
+body[state="3to4"]::before,
+body[state="4to5"]::before,
+body[state="1to0"]::before,
+body[state="2to1"]::before,
+body[state="3to2"]::before,
+body[state="4to3"]::before,
+body[state="5to4"]::before {
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-delay: 0s;
+  -webkit-transform-origin: 50% 50%;
+  -webkit-animation-duration: .5s;
+}
+
+body[state="0"]::before,
+body[state="1to0"]::before {
+  -webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  filter: blur(30px);
+}
+
+body[state="0to1"]::before,
+body[state="2to1"]::before {
+  -webkit-filter: blur(24px);
+  -moz-filter: blur(24px);
+  -o-filter: blur(24px);
+  -ms-filter: blur(24px);
+  filter: blur(24px);
+}
+
+body[state="1to2"]::before,
+body[state="3to2"]::before {
+  -webkit-filter: blur(18px);
+  -moz-filter: blur(18px);
+  -o-filter: blur(18px);
+  -ms-filter: blur(18px);
+  filter: blur(18px);
+}
+
+body[state="2to3"]::before,
+body[state="4to3"]::before {
+  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  -o-filter: blur(12px);
+  -ms-filter: blur(12px);
+  filter: blur(12px);
+}
+
+body[state="3to4"]::before,
+body[state="5to4"]::before {
+  -webkit-filter: blur(6px);
+  -moz-filter: blur(6px);
+  -o-filter: blur(6px);
+  -ms-filter: blur(6px);
+  filter: blur(6px);
+}
+
+body[state="4to5"]::before {
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -o-filter: blur(0px);
+  -ms-filter: blur(0px);
+  filter: blur(0px);
+}
+
+body[state="0to1"]::before {
+  -webkit-animation-name: state0to1;
+}
+
+body[state="1to2"]::before {
+  -webkit-animation-name: state1to2;
+}
+
+body[state="2to3"]::before {
+  -webkit-animation-name: state2to3;
+}
+
+body[state="3to4"]::before {
+  -webkit-animation-name: state3to4;
+}
+
+body[state="4to5"]::before {
+  -webkit-animation-name: state4to5;
+}
+
+body[state="1to0"]::before {
+  -webkit-animation-name: state1to0;
+}
+
+body[state="2to1"]::before {
+  -webkit-animation-name: state2to1;
+}
+
+body[state="3to2"]::before {
+  -webkit-animation-name: state3to2;
+}
+
+body[state="4to3"]::before {
+  -webkit-animation-name: state4to3;
+}
+
+body[state="5to4"]::before {
+  -webkit-animation-name: state5to4;
+}
+
+@keyframes state0to1 {
+  0% {
+    -webkit-filter: blur(30px);
+    -moz-filter: blur(30px);
+    -o-filter: blur(30px);
+    -ms-filter: blur(30px);
+    filter: blur(30px);
+  }
+  100% {
+    -webkit-filter: blur(24px);
+    -moz-filter: blur(24px);
+    -o-filter: blur(24px);
+    -ms-filter: blur(24px);
+    filter: blur(24px);
+  }
+}
+
+@keyframes state1to2 {
+  0% {
+    -webkit-filter: blur(24px);
+    -moz-filter: blur(24px);
+    -o-filter: blur(24px);
+    -ms-filter: blur(24px);
+    filter: blur(24px);
+  }
+  100% {
+    -webkit-filter: blur(18px);
+    -moz-filter: blur(18px);
+    -o-filter: blur(18px);
+    -ms-filter: blur(18px);
+    filter: blur(18px);
+  }
+}
+
+@keyframes state2to3 {
+  0% {
+    -webkit-filter: blur(18px);
+    -moz-filter: blur(18px);
+    -o-filter: blur(18px);
+    -ms-filter: blur(18px);
+    filter: blur(18px);
+  }
+  100% {
+    -webkit-filter: blur(12px);
+    -moz-filter: blur(12px);
+    -o-filter: blur(12px);
+    -ms-filter: blur(12px);
+    filter: blur(12px);
+  }
+}
+
+@keyframes state3to4 {
+  0% {
+    -webkit-filter: blur(12px);
+    -moz-filter: blur(12px);
+    -o-filter: blur(12px);
+    -ms-filter: blur(12px);
+    filter: blur(12px);
+  }
+  100% {
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+  }
+}
+
+@keyframes state4to5 {
+  0% {
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+  }
+}
+
+@keyframes state5to4 {
+  0% {
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
+  }
+  100% {
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+  }
+}
+
+@keyframes state4to3 {
+  0% {
+    -webkit-filter: blur(6px);
+    -moz-filter: blur(6px);
+    -o-filter: blur(6px);
+    -ms-filter: blur(6px);
+    filter: blur(6px);
+  }
+  100% {
+    -webkit-filter: blur(12px);
+    -moz-filter: blur(12px);
+    -o-filter: blur(12px);
+    -ms-filter: blur(12px);
+    filter: blur(12px);
+  }
+}
+
+@keyframes state3to2 {
+  0% {
+    -webkit-filter: blur(12px);
+    -moz-filter: blur(12px);
+    -o-filter: blur(12px);
+    -ms-filter: blur(12px);
+    filter: blur(12px);
+  }
+  100% {
+    -webkit-filter: blur(18px);
+    -moz-filter: blur(18px);
+    -o-filter: blur(18px);
+    -ms-filter: blur(18px);
+    filter: blur(18px);
+  }
+}
+
+@keyframes state2to1 {
+  0% {
+    -webkit-filter: blur(18px);
+    -moz-filter: blur(18px);
+    -o-filter: blur(18px);
+    -ms-filter: blur(18px);
+    filter: blur(18px);
+  }
+  100% {
+    -webkit-filter: blur(24px);
+    -moz-filter: blur(24px);
+    -o-filter: blur(24px);
+    -ms-filter: blur(24px);
+    filter: blur(24px);
+  }
+}
+
+@keyframes state1to0 {
+  0% {
+    -webkit-filter: blur(24px);
+    -moz-filter: blur(24px);
+    -o-filter: blur(24px);
+    -ms-filter: blur(24px);
+    filter: blur(24px);
+  }
+  100% {
+    -webkit-filter: blur(30px);
+    -moz-filter: blur(30px);
+    -o-filter: blur(30px);
+    -ms-filter: blur(30px);
+    filter: blur(30px);
+  }
+}
